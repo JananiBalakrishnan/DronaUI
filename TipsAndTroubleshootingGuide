@@ -17,3 +17,10 @@ at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
 
 Solution: 
 Exclude any Guava dependency and add an individual guava dependency. Refresh the project. Update Maven dependencies and run the test again.
+
+Tips: 
+TO know the package and activity of an app: Open the app in the emulator and run the following : 
+adb shell
+dumpsys window windows | grep -E 'mCurrentFocus'
+
+mCurrentFocus=Window{68832b7 u0 com.android.settings/com.android.settings.Settings$ManageApplicationsActivity}
